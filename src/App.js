@@ -1,8 +1,5 @@
-import logo from './logo.svg';
-import progress from './assets/bar.svg';
-import loader from './assets/circle3.png';
+
 import './App.css';
-import ProgressBar from './components/ProgressBar';
 import BoxBar from './components/BoxBar';
 
 function App() {

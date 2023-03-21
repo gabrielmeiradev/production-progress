@@ -1,8 +1,8 @@
-import React,{useState} from "react"
+import React from "react"
 import loader from '../assets/circle3.png';
 import minBar from '../assets/mini-bar.png';
 
-const ProgressBar = ({porcent,top,left}) => {
+const ProgressBar = ({porcent}) => {
     // const [porcent, setPorcent] = useState(0);
 
     // const handlerIncrent =()=>{

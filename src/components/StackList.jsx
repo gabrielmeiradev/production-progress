@@ -1,8 +1,5 @@
-import React,{useState} from 'react'
-import user1 from '../assets/user1.png'
-import user2 from '../assets/user2.png'
-import user3 from '../assets/user3.png'
-import { motion } from "framer-motion"
+import React from 'react'
+
 export default function StackList({users,background}) {
     // console.log(users)
   return (
