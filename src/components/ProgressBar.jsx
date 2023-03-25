@@ -1,9 +1,9 @@
-import React from "react"
+import React,{useState,useEffect} from "react"
 import loader from '../assets/circle3.png';
 import minBar from '../assets/mini-bar.png';
 
-const ProgressBar = ({porcent}) => {
-    // const [porcent, setPorcent] = useState(0);
+const ProgressBar = ({porcent,plant}) => {
+     const [miniBarCounter, setMiniBarCounter] = useState(0);
 
     // const handlerIncrent =()=>{
     //     if (porcent<100){
@@ -17,6 +17,18 @@ const ProgressBar = ({porcent}) => {
     //     }
 
     // }
+    useEffect(() => {
+      const id = setInterval(() => {
+        setMiniBarCounter(c=>c + 1);
+        
+      }, 10);
+      return () => {
+        clearInterval(id);
+      };
+    }, [])
+    if (miniBarCounter===100){
+      setMiniBarCounter(0);
+    }
     return(
     <div className="wrapper" >
         <svg height={110} width={310} xmlns="http://www.w3.org/2000/svg" >
@@ -2959,16 +2971,15 @@ const ProgressBar = ({porcent}) => {
         <img src={loader} alt="loader-1" className={`${porcent!==0&&porcent!==100?'loader-1-animated':''} loader-1`}/>
         <img src={loader} alt="loader-1" className={`${porcent!==0&&porcent!==100?'loader-2-animated':''} loader-2`}/>
         <img src={loader} alt="loader-1" className={`${porcent!==0&&porcent!==100?'loader-3-animated':''} loader-3`}/>
-        <img src={minBar} alt="mini-bar" className="mini-bar" style={{width:porcent/1.538}}/>
+        <img src={minBar} alt="mini-bar" 
+          className="mini-bar" 
+          style={{width:porcent!==0&&porcent!==100?miniBarCounter/1.538:0}}
+        />
         <div className="mini-bar-empty"></div>
         <div className="porcentage-div">
             <h1 className="porcentage">{porcent}%</h1>
         </div>
-        <h1 className="loading">LOADING...</h1>
-        {/* <div className="button-group">
-            <button className="button-1" onClick={handlerDecrement}>-</button>
-            <button className="button-2" onClick={handlerIncrent}>+</button>
-        </div>     */}
+        <h1 className="loading">{plant}</h1>
     </div>
   
 )}

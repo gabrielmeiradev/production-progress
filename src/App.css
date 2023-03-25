@@ -1,5 +1,6 @@
 svg{
   border-radius: 150px;
+  filter: drop-shadow(6px 6px 3px rgb(0 0 0 / 0.6));
 }
 .App{
   position: relative;
@@ -13,6 +14,37 @@ svg{
   position: absolute;
 }
 
+.tank{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -50px;
+  left: 30px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+}
+.product{
+  position: absolute;
+  width: 55px;
+  height: 30px;
+  top: -30px;
+  left: 30px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 12px;
+}
+.product2{
+  width: auto;
+  height: 40px;
+
+}
+.product2-div{
+  position: absolute;
+  width: auto;
+  height: 40px;
+  top: -40px;
+  left: 80px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  opacity: 0.7;
+}
 
 .loader-1{
   position: absolute;
@@ -100,11 +132,11 @@ svg{
 
 .loading{
   position: absolute;
-  top: 60px;
+  top: 62px;
   left: 120px;
   height: 14px;
   z-index: 99;
-  font-size: 15px;
+  font-size: 13px;
   color: rgb(159, 182, 182);
   /* font-family: 'Roboto', sans-serif; */
   font-family: 'Orbitron', sans-serif;
@@ -156,37 +188,44 @@ svg{
 .stack-list{
   /* background-color: burlywood; */
   width: auto;
-  max-width: 200px;
-  min-width: 200px;
+  max-width: 350px;
+  min-width: 150px;
   position: absolute;
   top: 100px;
   left: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(to left, rgba(13, 1, 1, 0), rgb(13, 3, 3));
 }
 .stack-list-bg{
   /* background-color: burlywood; */
   width: auto;
-  max-width: 200px;
-  min-width: 100px;
+  max-width: 350px;
+  min-width: 150px;
   position: absolute;
   top: 100px;
   left: 100px;
   padding: 10px;
   border-radius: 10px;
   background-color: black;
-  opacity: 0.9;
+  opacity: 0.8;
 }
 .stack-list-element-1{
   display: flex;
   align-items: center;
+  justify-content: space-around;
   animation: fade-in 2s linear 0s normal none;
 }
 .stack-list-element-2{
   display: flex;
   align-items: center;
+  justify-content: space-around;
+
 }
 .stack-list-element-fade{
   display: flex;
   align-items: center;
+  justify-content: space-around;
   opacity: 0.3;
 }
 .list-image{
@@ -238,7 +277,7 @@ svg{
 }
 
 
-.arrow-1{
+/* .arrow-1{
   position: absolute;
   height: 200px;
   width: 40px;
@@ -246,7 +285,7 @@ svg{
   border: 40px dashed black;
   left: 40px;
   top: 300px;
-} 
+}  */
 
 /* Arrow */
 
@@ -293,4 +332,68 @@ svg{
 	-webkit-transform: rotate(12deg);
   -moz-transform:rotate(12deg);
   -ms-transform: rotate(12deg);
+}
+
+.arrow-1{
+  position: absolute;
+  width: 350px;
+  height: 120px;
+  top: 105px;
+  left: 50px;
+
+}
+.arrow-2{
+  /* clip-path: polygon(0 0, 100% 13%, 83% 100%, 13% 100%); */
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  top: -240px;
+  left: 50px;
+  
+}
+.arrow-3{
+  position: absolute;
+  width: 350px;
+  height: 120px;
+  top: 105px;
+  left: 50px;
+  
+}
+.arrow-4{
+  position: absolute;
+  width: 350px;
+  height: 240px;
+  top: -160px;
+  left: -90px;
+  /* border: 3px solid black; */
+  
+}
+
+.arrow-5{
+  position: absolute;
+  width: 270px;
+  height: 440px;
+  top: -360px;
+  left: -250px;
+  /* border: 3px solid black; */
+  
+}
+
+
+.arrow-6{
+  position: absolute;
+  width: 250px;
+  height: 180px;
+  top: -80px;
+  left: -90px;
+  
+}
+
+.arrow-7{
+  position: absolute;
+  width: 250px;
+  height: 280px;
+  top: -200px;
+  left: -60px;
+
 }

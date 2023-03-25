@@ -4,11 +4,9 @@ import StackList from './StackList';
 import user1 from '../assets/user1.png'
 import user2 from '../assets/user2.png'
 import user3 from '../assets/user3.png'
+import makeArrow from '../utils/arrows';
 
-
-export default function BoxBar({top,left,background,porcent}) {
-    // const [porcent, setPorcent] = useState(0); 
-    // const [user, setUser] = useState(''); 
+export default function BoxBar({top,left,background,porcent,tank,product,product2,plant,barID}) {
     const users = [
                 {
             position:1,
@@ -26,68 +24,28 @@ export default function BoxBar({top,left,background,porcent}) {
             image:user3
         }
     ]     
-    // const [randomImg, setRandomImg] = useState(0)     
-    
-    // const handlerIncrent =()=>{
-    //     if (porcent<100){
-    //         setPorcent(porcent+2)
-    //     }
 
-    // }
-    // const handlerDecrement =()=>{
-    //     if (porcent>0){
-    //         setPorcent(porcent-2)
-    //     }
+    const id = setInterval(() => {
+    const c = makeArrow(barID)
+    if (c){
+        console.log(c)
+        clearInterval(id)
+    }
+    }, 1000);
 
-    // }
-    // const handleChange = (value)=>{
-    //     setUser(value)
-    // }
-    // const sendUser = ()=>{
-    //     let img = ''
-    //     if (users.length===3){
-    //         users.pop()
-    //     }
-    //     console.log(randomImg)
-    //     switch (randomImg) {
-    //         case 1:
-    //             img =user1
-    //             setRandomImg(2)
-    //             break;
-    //         case 2:
-    //             img =user2
-    //             setRandomImg(3)
-    //             break;
-    //         case 3:
-    //             img =user3
-    //             setRandomImg(4)
-    //             break;              
-    //         default:
-    //             img =user4          
-    //             setRandomImg(1)
-    //     }
-    //     const newArr = [...users]
-    //     newArr.unshift({
-    //       text: user,
-    //       image: img
-    //     });
-    //     setUsers(newArr)
-    //     console.log(users)
-    //     var listElement1 = document.getElementById('list-element-1');
-
-    //     listElement1.classList.remove("stack-list-element-1")
-    //     void listElement1.offsetWidth;
-    //     listElement1.classList.add("stack-list-element-1")
-    // }
   return (
-    <div className='box-bar' style={{top:`${top}px`,left:`${left}px`}}>
-        <ProgressBar porcent={porcent} />
+    <div className='box-bar' style={{top:`${top}%`,left:`${left}%`}}>
+        <ProgressBar porcent={porcent} plant={plant}/>
         <StackList users={users} background={background}/>
-        {/* <div className='arrow-1'></div> */}
-        {/* <div class="arrow">
-            <div class="curve"></div>
-            <div class="point"></div>
-        </div> */}
+
+        <img className='tank' src={require(`../assets/${tank}_galao.gif`)} alt='tank'/>
+        {product?
+        <img className='product' src={require(`../assets/${product}.png`)} alt='product'/>:''}
+        {product2?
+        <div className='product2-div'>
+            <img className='product2' src={require(`../assets/${product2}.png`)} alt='product'/>
+        </div>:''}
+        <canvas className={`arrow-${barID}`} id={`arrow${barID}`}></canvas>
     </div>
 
   )
