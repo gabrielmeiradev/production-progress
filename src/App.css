@@ -32,25 +32,29 @@ svg{
 }
 .product2{
   width: auto;
-  height: 40px;
+  max-width: 100px;
+  height: 35px;
 
 }
 .product2-div{
   position: absolute;
-  width: auto;
+  width: 105px;
   height: 30px;
   top: 20px;
   left: 15px;
   background-color: rgb(46, 227, 230);
   z-index: 90;
+  display: flex;
+  justify-content: flex-end;
+
   border-radius: 10px;
 }
 .product-unit{
   position: absolute;
-  width: 60px;
+  width: 55px;
   height: 30px;
   top: 26px;
-  left: 62px;
+  left: 65px;
   background-color: rgb(46, 227, 230);
   border-radius: 10px;
   
