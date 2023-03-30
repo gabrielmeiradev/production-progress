@@ -1,12 +1,37 @@
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* background: #f1f1f1;  */
+  background-color: transparent;
+
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+body {
+  overflow: overlay;
+}
+
 svg{
   border-radius: 150px;
   filter: drop-shadow(6px 6px 3px rgb(0 0 0 / 0.6));
+  /* width: 200px; */
 }
-.App{
-  position: relative;
-  background-image:  url(./assets/Plants.png);
-  background-size: cover;
-}
+
 .box-bar{
   /* background-color: red; */
   width: auto;
@@ -32,24 +57,25 @@ svg{
 }
 .product2{
   width: auto;
-  max-width: 100px;
+  max-width: 110px;
   height: 35px;
 
 }
 .product2-div{
   position: absolute;
-  width: 105px;
+  width: 110px;
   height: 30px;
   top: 20px;
   left: 15px;
-  background-color: rgb(46, 227, 230);
+  /* background-color: red; */
   z-index: 90;
-  display: flex;
-  justify-content: flex-end;
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: center;
 
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
-.product-unit{
+/* .product-unit{
   position: absolute;
   width: 55px;
   height: 30px;
@@ -58,7 +84,7 @@ svg{
   background-color: rgb(46, 227, 230);
   border-radius: 10px;
   
-}
+} */
 
 .loader-1{
   position: absolute;
@@ -97,13 +123,19 @@ svg{
 .wrapper{
   position: absolute;
   height: auto;
-  width: 350px;
+  width: auto;
   display: flex;
   flex-direction: column;
 }
+
+
 .App{
   /* background-color: darkslategray; */
-  height: 100vh;
+  position: relative;
+  background-image:  url(./assets/Plants.png);
+  background-size: cover;
+  height: 1080px;
+  width: 1920px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -487,4 +519,16 @@ svg{
   font-size: 13px;
   color: rgb(159, 182, 182);
   font-family: 'Orbitron', sans-serif;
+}
+
+@media (min-width: 1920px)
+{
+  #root{
+  background-color: #615d5c;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
 }

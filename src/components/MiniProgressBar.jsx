@@ -1,7 +1,7 @@
 import * as React from "react"
 
 const MiniProgressBar = (props) => (
-  <svg height={110} width={310} xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg height={80} width={210} xmlns="http://www.w3.org/2000/svg" {...props}>
     <defs>
      
       <linearGradient
