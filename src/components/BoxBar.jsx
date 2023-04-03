@@ -52,18 +52,21 @@ export default function BoxBar({ top, left, background, porcent, tank, product, 
             </div>
             <div className='mini-progress-bar'>
                 <MiniProgressBar />
+                <div className="porcentage-div-mini-bar">
+                    <h1 className="porcentage-mini-bar">10%</h1>
+                </div>
 
-                {product2 ?
-                    <>
-                        <div className='product2-div'>
-                            <img className='product2' src={require(`../assets/${product2}.png`)} alt='product' />
-                        </div>
-                        {/* <div className='product-unit'></div> */}
-                        <div className="porcentage-div-mini-bar">
-                            <h1 className="porcentage-mini-bar">10%</h1>
-                        </div>
-                    </>
-                    : ''}
+                <div className='product-name-area'>
+                    {product2 ?
+                        <>
+                            <div className='product2-div'>
+                                <img className='product2' src={require(`../assets/${product2}.png`)} alt='product' />
+                            </div>
+                            {/* <div className='product-unit'></div> */}
+
+                        </>
+                        : ''}
+                </div>
             </div>
         </div>
 
