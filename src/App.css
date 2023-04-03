@@ -523,13 +523,13 @@ svg{
 }
 .product-name-area{
   background-color: black;
-  height: 45px;
+  height: 46px;
   width: 120px;
   position: absolute;
   left: 5px;
-  top: 14px;
+  top: 13px;
   border-radius: 20px 0 0 20px;
-  border: 0.5px solid #33fcffc1;
+  border: 0.5px solid #33fcffe3;
   border-right: none;
   display: flex;
   justify-content: center;
