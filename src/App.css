@@ -383,46 +383,44 @@ svg{
 
 .arrow-1{
   position: absolute;
-  width: 350px;
+  width: 400px;
   height: 120px;
   top: 105px;
   left: 50px;
-
 }
 .arrow-2{
   /* clip-path: polygon(0 0, 100% 13%, 83% 100%, 13% 100%); */
   position: absolute;
-  width: 400px;
-  height: 450px;
-  top: -240px;
-  left: 50px;
+  width: 450px;
+  height: 350px;
+  top: -340px;
+  left: 45px;
   
 }
 .arrow-3{
   position: absolute;
   width: 350px;
-  height: 120px;
+  height: 170px;
   top: 105px;
   left: 50px;
+
   
 }
 .arrow-4{
   position: absolute;
-  width: 350px;
-  height: 240px;
-  top: -160px;
-  left: -90px;
-  /* border: 3px solid black; */
+  width: 200px;
+  height: 440px;
+  top: -390px;
+  left: 10px;
   
 }
 
 .arrow-5{
   position: absolute;
-  width: 270px;
-  height: 440px;
-  top: -360px;
+  width: 330px;
+  height: 480px;
+  top: -400px;
   left: -250px;
-  /* border: 3px solid black; */
   
 }
 
@@ -430,18 +428,18 @@ svg{
 .arrow-6{
   position: absolute;
   width: 250px;
-  height: 180px;
-  top: -80px;
+  height: 280px;
+  top: -180px;
   left: -90px;
-  
+
 }
 
 .arrow-7{
   position: absolute;
-  width: 250px;
+  width: 450px;
   height: 280px;
-  top: -200px;
-  left: -60px;
+  top: -260px;
+  left: -260px;
 
 }
 
