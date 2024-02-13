@@ -133,7 +133,7 @@ svg{
 .App{
   /* background-color: darkslategray; */
   position: relative;
-  background-image:  url(./assets/Plants.png);
+  /* background-image:  url(./assets/Plants.png); */
   background-size: cover;
   height: 1080px;
   width: 1920px;
@@ -141,7 +141,9 @@ svg{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
+
 .button-group{
   margin-inline: auto;
   margin-top: 180px;
@@ -393,7 +395,7 @@ svg{
   position: absolute;
   width: 450px;
   height: 350px;
-  top: -340px;
+  top: -270px;
   left: 45px;
   
 }
@@ -410,7 +412,7 @@ svg{
   position: absolute;
   width: 200px;
   height: 440px;
-  top: -390px;
+  top: -270px;
   left: 10px;
   
 }
@@ -419,8 +421,8 @@ svg{
   position: absolute;
   width: 330px;
   height: 480px;
-  top: -400px;
-  left: -250px;
+  top: -300px;
+  left: -200px;
   
 }
 
@@ -429,8 +431,8 @@ svg{
   position: absolute;
   width: 250px;
   height: 280px;
-  top: -180px;
-  left: -90px;
+  top: -150px;
+  left: -70px;
 
 }
 
@@ -438,8 +440,8 @@ svg{
   position: absolute;
   width: 450px;
   height: 280px;
-  top: -260px;
-  left: -260px;
+  top: -205px;
+  left: -200px;
 
 }
 
@@ -536,6 +538,11 @@ svg{
   
 }
 
+.backImg{
+  width: 100%;
+
+}
+
 @media (min-width: 1920px)
 {
   #root{
@@ -546,4 +553,27 @@ svg{
   justify-content: center;
   align-items: center;
 }  
+}
+
+.error-message{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #555;
+}
+
+.error-div{
+  padding: 20px;
+  width: 250px;
+  height: 100px;
+  background-color: #888;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: red;
 }

@@ -1,5 +1,4 @@
 export default function makeArrow (id){
-    console.log('teste',id)
     switch (id) {
         case 1:
             let dpi1 = window.devicePixelRatio;
@@ -204,7 +203,6 @@ export default function makeArrow (id){
             return c;
         case 4:
             var dpi4 = window.devicePixelRatio;
-            console.log('dpi',dpi4)
             //eslint-disable-next-line
             var c = document.getElementById('arrow4');
             //eslint-disable-next-line

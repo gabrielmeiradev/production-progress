@@ -5,18 +5,6 @@ import minBar from '../assets/mini-bar.png';
 const ProgressBar = ({porcent,plant}) => {
      const [miniBarCounter, setMiniBarCounter] = useState(0);
 
-    // const handlerIncrent =()=>{
-    //     if (porcent<100){
-    //         setPorcent(porcent+2)
-    //     }
-
-    // }
-    // const handlerDecrement =()=>{
-    //     if (porcent>0){
-    //         setPorcent(porcent-2)
-    //     }
-
-    // }
     useEffect(() => {
       const id = setInterval(() => {
         setMiniBarCounter(c=>c + 1);

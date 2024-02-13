@@ -1218,77 +1218,7 @@ const MiniProgressBar = (props) => (
         d="M3869.53 3835.75c-3.8 0-6.86 3.07-6.86 6.86v194.72c0 3.8 3.06 6.87 6.86 6.87a6.86 6.86 0 0 0 6.86-6.87v-194.72c0-3.79-3.07-6.86-6.86-6.86"
       />
     </g>
-    
-    {/* <g
-      clipPath="url(#aA)"
-      transform="rotate(180 223.992 183.581) scale(.08414)"
-    >
-      <path
-        style={{
-          fill: "url(#aB)",
-          fillOpacity: 1,
-          fillRule: "nonzero",
-          stroke: "none",
-        }}
-        d="M5201.66 4066.93H3856.43v114.67h1065.85c24.49-24.49 39.56-39.57 61.71-61.72h164.71l52.96-52.95m-1194.71 82.26c-4.66-7.82-6.01-14.73-6.48-19.2-.29-2.26-.25-3.97-.25-5.1v-1.7c.6-14.95 9.01-29.32 21.81-37.1l.18-.1c7.18-4.37 15.6-6.72 24.02-6.72.63 0 1.26.01 1.89.03 14.95.6 29.31 9.01 37.09 21.83l.11.16c4.69 7.73 7.06 16.87 6.67 25.91-.58 14.95-8.99 29.32-21.8 37.1l-.17.1c-6.66 3.99-14.35 6.4-22.13 6.67-1.27 0-2.53.01-3.79.02 0 0-.93-.09-2.79-.25-1.86-.16-4.65-.57-8.22-1.65-7.01-1.97-18.06-7.21-26.14-20m151.16-52.25c-.8-2.61-1.19-3.92-1.19-3.92-.4-1.31-.8-2.61-1.19-3.92-.4-1.31-.8-2.62-1.19-3.93 0 0-.4-1.31-1.19-3.92 3-.8 5.25-1.32 6.81-1.47l2.31-.33c1.33-.11 2.67-.17 4.01-.17 9.13 0 18.22 2.73 25.8 7.79 8.69 5.81 15.24 14.73 18.32 24.7l.05.19c.85 2.95 1.45 5.95 1.77 9.02.94 10.45-1.81 21.11-7.61 29.81-5.81 8.69-14.73 15.24-24.69 18.32l-.2.06c-2.95.85-5.96 1.44-9.02 1.77-1.34.12-2.69.18-4.03.18-9.12 0-18.2-2.73-25.78-7.79-8.69-5.81-15.24-14.74-18.33-24.7l-.05-.19c-.85-2.95-1.44-5.96-1.76-9.03-.39-4.71-.09-9.46.9-14.07 0 0 .24-.98.75-2.95.57-1.94 1.55-4.83 3.39-8.44 3.65-6.94 11.64-17.72 27.36-22.7.79 2.61 1.19 3.92 1.19 3.92.39 1.31.79 2.62 1.19 3.93.39 1.31.79 2.61 1.19 3.92 0 0 .39 1.31 1.19 3.92-10.12 3.24-15.2 10.11-17.58 14.6-2.34 4.69-2.67 7.33-2.67 7.33-.62 2.97-.81 6-.59 9.02.23 1.97.61 3.9 1.15 5.82l.04.12c2.02 6.43 6.17 12.11 11.76 15.87a30.316 30.316 0 0 0 19.16 4.91c1.97-.23 3.9-.61 5.82-1.15l.11-.03c6.44-2.03 12.11-6.17 15.88-11.78 3.73-5.61 5.48-12.47 4.9-19.15-.22-1.96-.6-3.9-1.14-5.82l-.04-.12c-2.02-6.43-6.17-12.11-11.78-15.87-4.91-3.27-10.77-5.01-16.64-5.01-.84 0-1.67.03-2.51.11 0 0-.48.07-1.47.22-1.01.08-2.45.45-4.4.93m-232.93-17.65c1.25.03 2.52.07 3.77.1 0 0 .93.11 2.79.34 1.84.22 4.63.71 8.17 1.89 6.94 2.19 17.82 7.77 25.51 20.8 4.4 7.96 5.56 14.9 5.89 19.38.21 2.27.12 3.98.09 5.11l-.06 1.7c-1.06 14.93-9.9 29.03-22.94 36.41l-.18.1c-6.91 3.92-14.86 6-22.82 6-1.1 0-2.19-.04-3.28-.12-14.92-1.05-29.02-9.9-36.41-22.95l-.1-.16c-4.45-7.87-6.54-17.08-5.87-26.11 1.05-14.92 9.89-29.03 22.94-36.41l.17-.1c6.77-3.78 14.53-5.95 22.33-5.98m121.07 16.38c-5.45 0-10.82 1.49-15.51 4.32l-.1.07c-8.26 5.03-13.61 14.2-14.03 23.86.01-.01.01-.01.02-.01.34 0-1.41 6.47 4.31 16.71 5.23 8.22 12.25 11.59 16.79 12.84 2.31.7 4.12.97 5.31 1.06l1.79.18 2.43-.02c5.02-.18 9.89-1.73 14.21-4.28l.11-.06c8.25-5.04 13.6-14.2 14.03-23.86.23-5.84-1.27-11.64-4.29-16.65l-.07-.11c-5.04-8.25-14.2-13.6-23.86-14.02-.38-.02-.76-.03-1.14-.03m-120.96.02c-5.01.02-9.94 1.43-14.33 3.84l-.12.06c-8.4 4.78-14.03 13.78-14.75 23.42-.41 5.83.92 11.66 3.78 16.77l.06.11c4.79 8.4 13.78 14.04 23.42 14.75a30.177 30.177 0 0 0 16.78-3.77l.1-.07c8.4-4.78 14.04-13.78 14.76-23.42l-.01.01c-.36 0 1.59-6.42-3.81-16.84-4.98-8.37-11.88-11.96-16.4-13.35-2.27-.77-4.07-1.09-5.26-1.22-1.19-.16-1.79-.23-1.79-.23l-2.43-.06"
-      />
-    </g> */}
-    {/* <path
-      style={{
-        fill: "#33fcff",
-        fillOpacity: 1,
-        fillRule: "nonzero",
-        stroke: "none",
-        strokeWidth: 0.631058,
-      }}
-      d="M277.05 4364.7H653.85a2.587 2.587 0 1 1 0 5.175H277.05a2.587 2.587 0 1 1 0-5.175M308.105 4349.177h345.744a2.583 2.583 0 0 1 2.587 2.587 2.583 2.583 0 0 1-2.587 2.587H308.105a2.583 2.583 0 0 1-2.588-2.587 2.583 2.583 0 0 1 2.588-2.587M204.605 4333.646h449.244a2.587 2.587 0 0 1 2.587 2.588 2.588 2.588 0 0 1-2.587 2.593H204.605a2.593 2.593 0 0 1-2.594-2.593 2.592 2.592 0 0 1 2.594-2.588"
-      transform="matrix(.13333 0 0 -.13333 .752 600.752)"
-    /> */}
-    {/* <g
-      clipPath="url(#aC)"
-      transform="rotate(180 223.992 183.581) scale(.08414)"
-    >
-      <image
-        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAAAhxJREFUOI2dlEty00AURU9/1JLjJDCDSZiwAYrsgAGwpKwgS2DAVqhiB1Qxo5gmA2Bop4gtS+rH4KmtliwHwq1S2f07fXXVrw0g1fU1APbZc2ZVFJgQYLHALJcYaw+mmJMTCCXr16+UVV1dzcP+U+ffvgPg88746+fgIJRQlpiiAOe0r/8lBG370fKRdOT+ftxblsiu1tc3ZuhP4AQ1FpwF60bLn/6ue3DbDr3GQNsppN4i1uoGgOx2+gZJ1oDzYO3+LQbHTZNNtPrUW7AGAUwZFRojJkZMCOrWOXUaCowvoKomYJGhFSNEgcJDp65lvULWKwDCu/fjyAyQoL6ALHMvXTfODVFoXeuTa7nkQM5DWWlE2TH0bLf6r6qQlLVzCp/InD05BPdr91Dne3BS2sA5RvHkOplxDOjHsJB9WC+r1djV6Snsdgdrzz58nIf23Djp8zLN8YgWD4zdA9MiH06FCMSItC1yd3ew+MfbN7z89HkWbHrEBnWv4JRtjAqOcRb8kOsajSIf95KXc9dpFbYtkjbM9LU4vNUum8ipgRZIpdYI+PxDSQKnatxs9mPx5mbW7ZfCctkKVoR0YzSAHznrOqRp9FT02Utdw2aDOT9H1ut5uDej9otdxEvmClDHfd7E4RAdgx6TFsj03MYIIlqJbYtMr9W/6CbYmWszh4NGEsL8nAdkALEXF7OnAICm2ef8GFmAeHv7qEX/oj/a5+Yo6QkhBAAAAABJRU5ErkJggg=="
-        transform="matrix(107.2 0 0 -107.2 3872.9 4179.1)"
-        preserveAspectRatio="none"
-        style={{
-          imageRendering: "optimizeSpeed",
-        }}
-        height={1}
-        width={1}
-      />
-    </g>
-    <g
-      clipPath="url(#aD)"
-      transform="rotate(180 223.992 183.581) scale(.08414)"
-    >
-      <image
-        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAAAiJJREFUOI2llb1uE0EQx3/jW5/tS7BAKIqUwlRpaGmQeAUKnoM8AgXwFnkdaKCBhidIEQkpEqLgfHtfOxRza9+HXSQZeWXv7uxv/jOzvhNElL6JMDbprzmHZNnET9ZrAMLtLQCzCeWRNru8tPgPJqQpslwe3ZYHlyLLkPkcZrP9GRFIU5LN5p6KI3S1MqjIfsR5dL0XeJxVVLtYIEkyBL+s2kEUB/xcHI43u7gYwrvUJU3BORuRVXQVTgRabLyqWn6kyZScplPxyyXM53t4XN9UYdA8AZ6N+henv968HiqOP7MMkgSSZNdol/cOZ4ACxVhV/F4sDoNPTmzeuyHyfKQ4myRr4N/v3o4We+DTUwhhsO2GU9geAcv5+VEweW5q+9tP//lOsdqnaSbRI8J//HAgLNDazdKiADWcI7RTRx3n0dmBW2H+Ct5bEztzO3UhWOSyBFX075+e5K4hh8BR7XJpjI7ntCiGTk2DbnOoa2iaAZjVahjMewNpQJzb+WlR4Cj93rlu0Loy1W2Ltq2p955wc8Ns8wL1HnyBlqWBnRso3ZVC83ywQFMT6y4iqCqoImdnsN1CCBYcIMugqiwz1QMPobIc1S0AulNsAbuyoJA4xM3R6BvC/s9R1z1wNQJHUzVgZQo1BECsF85ZdkkCSa/2dU15fW0P+vW372h3eGJtC3mOVpX5eG9j9EIId3cA+M+frIzxDfLky9dHgbdX7wdr/wFHzPZSjt+FtgAAAABJRU5ErkJggg=="
-        transform="matrix(107.2 0 0 -107.2 3992.9 4179.1)"
-        preserveAspectRatio="none"
-        style={{
-          imageRendering: "optimizeSpeed",
-        }}
-        height={1}
-        width={1}
-      />
-    </g>
-    <g
-      clipPath="url(#aE)"
-      transform="rotate(180 223.992 183.581) scale(.08414)"
-    >
-      <image
-        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAAAiNJREFUOI2llU1v00AQhp+ZHa/dpKl6A8EVJA6IC0jckOgvKyfED0H8ssKxFUmbr10vh7Udf6SQirlsPDt+dvb1zETE+6Rv3yGXlwDoi5eMTdr14gLKEjEHIsMg55CqYvPta+boq9cT0P9Ydf0FABtv1D9vDplWFVQVOENms2GgCKg+ekAHTnd33QtSltkngphB4adXF+ngUhSDrfn3Hw14sz54y4q02yHeZ/jDQ4bP55lnLmeqmnUtC0ChsMHhRozDTNYP4EtSXSOALBbgXN5rV5EMLQzU5YOdA7MeOITh9cxgt+0gabmE5ZLEDXZ1NUyiKPLNVME31dKB63oIDiHDQ8jQ1t9mPzZVODvLB7geOPXAIgIpZVDs6d6CLxYTH5ArRhudj0mRIH/hse4tuKx6vt7P+Tw72koBLO33h4gEKewRG5ZPl935+ViIbLP5xGXc308gaRzVgPXZ8+NggBhG5bbfHc/umK+qpnuthf3gcdLSfzO14+F1CDCS70lg13Qj0H28FGtSSpBStz4ZXI7qOGw2hLjFFQV1jLQ9kWI8Dfx+lWv6dp3XOga2v3PzmPfEEFDy0AKIMfL43Guh9xtqYMVQY1GlmM3QokCdQ1RRsy7mn2CgKz9p5m+qa7QZleocaoaVJdaMWzhR467pU0Kcw+FJdQLvibsd1psRYbtl9fnTaeB+w0jzrE5R57HyUCnb5Yrbjx/yTU4Bn2q/3hz+P/8A/5acSL84iR8AAAAASUVORK5CYII="
-        transform="matrix(107.2 0 0 -107.2 4112.9 4179.1)"
-        preserveAspectRatio="none"
-        style={{
-          imageRendering: "optimizeSpeed",
-        }}
-        height={1}
-        width={1}
-      />
-    </g> */}
+
     <g
       clipPath="url(#clipPath4122)"
       transform="matrix(.13333 0 0 -.13333 .752 600.752)"
