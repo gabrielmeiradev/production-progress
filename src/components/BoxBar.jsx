@@ -26,9 +26,9 @@ export default function BoxBar({ top, left, background, porcent, product2, plant
         return timeString;
     };
 
-        if(data.timer) {
+        if(data.active_since) {
             setInterval(() => {
-                setTime(convertTimer(data.timer));
+                setTime(convertTimer(data.active_since));
             }, 1000);
         }
 
@@ -59,7 +59,7 @@ export default function BoxBar({ top, left, background, porcent, product2, plant
             <div className='mini-circle-3'>
                 <h1 className='mini-circle-porcent'>{data.turn_1}</h1>
             </div>
-            {data.timer && <div className="timer">{time}</div>}
+            {data.active_since && <div className="timer">{time}</div>}
            
             <div className='mini-progress-bar'>
                 <MiniProgressBar />
