@@ -549,10 +549,10 @@ svg{
   position: absolute;
   color: #28CACC;
   font-weight: 600;
-  top: -40px;
-  left: -89px;
+  top: -36px;
+  left: -50px;
   direction: rtl;
-  font-size: .9rem;
+  font-size: 1rem;
   text-align: right;
   z-index: 999;
   background-color: #00000090;

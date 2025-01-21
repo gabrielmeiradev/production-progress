@@ -5,42 +5,33 @@ import makeArrow from '../utils/arrows';
 import MiniProgressBar from './MiniProgressBar';
 
 export default function BoxBar({ top, left, background, porcent, product2, plant, barID, data }) {
-
-    data.timer = "2024-01-21T18:19:29.889Z"
     const [time, setTime] = useState("")
 
     const convertTimer = (timer) => {
+        const [hours, minutes, seconds] = timer.split(':').map(Number);
         const now = new Date();
-        const endTime = new Date(timer);
+        const endTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hours, minutes, seconds);
         const timeDiff = now - endTime;
 
         if (timeDiff <= 0) {
-            return time;
+            return "00:00:00";
         }
 
-        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+        const diffHours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const diffMinutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const diffSeconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-        let timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        let timeString = `${diffHours.toString().padStart(2, '0')}:${diffMinutes.toString().padStart(2, '0')}:${diffSeconds.toString().padStart(2, '0')}`;
 
-        if (days > 365) {
-            const years = Math.floor(days / 365);
-            const months = Math.floor(days / 30);
-            timeString = `${years}A ${months}M ${timeString}`;
-        } else if (days > 30) {
-            const months = Math.floor(days / 30);
-            timeString = `${months}M ${days}D ${timeString}`;
-        } else {
-            timeString = `${days}D ${timeString}`;
+        return timeString;
+    };
+
+        if(data.timer) {
+            setInterval(() => {
+                setTime(convertTimer(data.timer));
+            }, 1000);
         }
 
-        return timeString;};
-
-    setInterval(() => {
-        setTime(convertTimer(data.timer));
-    }, 1000);
     const id = setInterval(() => {
         const c = makeArrow(barID)
         if (c) {
@@ -68,7 +59,8 @@ export default function BoxBar({ top, left, background, porcent, product2, plant
             <div className='mini-circle-3'>
                 <h1 className='mini-circle-porcent'>{data.turn_1}</h1>
             </div>
-            <div className="timer">{time}</div>
+            {data.timer && <div className="timer">{time}</div>}
+           
             <div className='mini-progress-bar'>
                 <MiniProgressBar />
                
