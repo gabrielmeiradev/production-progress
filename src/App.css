@@ -543,6 +543,25 @@ svg{
 
 }
 
+
+.timer {
+  font-family: 'Orbitron', sans-serif;
+  position: absolute;
+  color: #28CACC;
+  font-weight: 600;
+  top: -40px;
+  left: -89px;
+  direction: rtl;
+  font-size: .9rem;
+  text-align: right;
+  z-index: 999;
+  background-color: #00000090;
+  backdrop-filter: blur(2px);
+  border: 1px solid #28CACC;
+  padding: 6px 18px;
+  border-radius: 100px;
+}
+
 @media (min-width: 1920px)
 {
   #root{
@@ -563,6 +582,7 @@ svg{
   align-items: center;
   background-color: #555;
 }
+
 
 .error-div{
   padding: 20px;
