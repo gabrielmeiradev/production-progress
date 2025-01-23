@@ -233,43 +233,61 @@ svg{
   transform: scale(1.1);
 }
 
+.stack-wrapper {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
 
 .stack-list{
   /* background-color: burlywood; */
-  width: auto;
+  width: 100%;
   max-width: 350px;
-  min-width: 150px;
-  position: absolute;
-  top: 100px;
-  left: 100px;
+  min-width: 200px;
   padding: 10px;
+  max-height: 90px;
   border-radius: 10px;
-  background-image: linear-gradient(to top, rgba(13, 1, 1, 0), rgb(13, 3, 3));
+  background-image: linear-gradient(to top, rgba(13, 1, 1, 0.2), rgb(13, 3, 3));
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 2px;
+  overflow-x: hidden;
 }
-.stack-list-bg{
-  /* background-color: burlywood; */
-  width: auto;
-  max-width: 350px;
-  min-width: 150px;
+.stack-list-next, .stack-list-prev {
   position: absolute;
-  top: 100px;
-  left: 100px;
-  padding: 10px;
-  border-radius: 10px;
+  background: #00000095;
+  border-radius: 3px;
+  backdrop-filter: blur(2px);
+  font-size: .9rem;
+  border: 0;
+  color:#4ddde0;
+  border: 1px solid #4ddde0;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.stack-list-next {
+  top: 30px;
+  right: -30px;
+}
+
+.stack-list-prev {
+  top: 30px;
+  left: -10px;
+}
+
+.stack-list-bg{
   background-color: black;
   opacity: 0.8;
 }
-.stack-list-element-1{
+.stack-list-element{
   display: flex;
+  width: 100%;
+  height: 30px;
   align-items: center;
   justify-content: space-around;
-  animation: fade-in 2s linear 0s normal none;
-}
-.stack-list-element-2{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
+  transition: .2s ease;
 }
 .stack-list-element-fade{
   display: flex;
@@ -280,14 +298,23 @@ svg{
 .list-image{
   height: 20px;
   width: 20px;
+  object-fit: cover;
   margin-top: 4px;
+}
+.stack-name {
+  /* font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  /* font-family: 'Orbitron', sans-serif; */
+  font-family: 'Orbitron', sans-serif;
+  font-size: .8rem;
+  font-weight: 600 !important;
+  color: #fff;
 }
 
 .list-text{
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 5px;
-  font-size: 10px;
+  font-size: .8rem;
   color: rgb(159, 182, 182);
   /* font-family: 'Roboto', sans-serif; */
   font-family: 'Orbitron', sans-serif;
@@ -543,16 +570,14 @@ svg{
 
 }
 
-
 .timer {
   font-family: 'Orbitron', sans-serif;
   position: absolute;
   color: #28CACC;
   font-weight: 600;
-  top: -36px;
-  left: -50px;
-  direction: rtl;
-  font-size: 1rem;
+  top: -45px;
+  left: -60px;
+  font-size: .7rem;
   text-align: right;
   z-index: 999;
   background-color: #00000090;
@@ -560,6 +585,11 @@ svg{
   border: 1px solid #28CACC;
   padding: 6px 18px;
   border-radius: 100px;
+  padding-right: 24px;
+}
+
+.timer legend {
+  font-weight: 400;
 }
 
 @media (min-width: 1920px)
