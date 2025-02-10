@@ -74,7 +74,7 @@ function App() {
     getData();
     const interval = setInterval(() => {
       getData();
-    }, 60000);
+    }, 300000);
 
     return () => clearInterval(interval);
   }, [token]);
