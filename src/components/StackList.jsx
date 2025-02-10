@@ -1,24 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function StackList({ users, background }) {
   const [slide, setSlide] = useState(0);
 
-  const slideChangeInterval = setInterval(() => {
-    nextSlide();
-  }, 3000);
+  useEffect(() => {
+    const slideChangeInterval = setInterval(() => {
+      nextSlide();
+    }, 8000);
+
+    return () => clearInterval(slideChangeInterval);
+  }, [slide]);
+
 
   const nextSlide = () => {
-    clearInterval(slideChangeInterval);
     if (slide >= users.length / 2 - 1) return setSlide(0);
     setSlide(slide + 1);
   };
-  const prevSlide = () => {
-    clearInterval(slideChangeInterval);
-    if (slide <= 0) return;
-    setSlide(slide - 1);
-  };
+
+  // const prevSlide = () => {
+  //   if (slide <= 0) return;
+  //   setSlide(slide - 1);
+  // };
+
   if (users.length <= 0) {
-    return;
+    return null;
   }
 
   return (
@@ -27,15 +32,20 @@ export default function StackList({ users, background }) {
         {users.map((user, index) => (
           <div
             key={index}
-            className={`stack-list-element`}
+            className={`stack-list-element ${(index === slide*2 || index === slide*2 + 1) ? "visible" : ""}`}
             style={{ transform: `translateX(${slide * -100}%)` }}
           >
-            <img
-              src={user.image}
-              alt={`user${index + 1}`}
-              className="list-image"
-            />
+            {user.image ? (
+              <img
+                src={user.image}
+                alt={`user${index + 1}`}
+                className="list-image"
+              />
+            ) : (
+              <div style={{ width: "24px", height: "24px" }}></div>
+            )}
             <h6 className="stack-name">{user.name}</h6>
+            {/* <h6 className="stack-name">{'I: ' + index + ' SI' + slide + ' VI: ' + ((index === slide*2 || index === slide*2 + 1) ? "T" : "F")}</h6> */}
             <h6 className="list-text">{user.time}</h6>
           </div>
         ))}
