@@ -599,6 +599,11 @@ svg{
   font-weight: 400;
 }
 
+.timer.inactive {
+  color: #e24950;
+  border: 1px solid  #e24950;
+}
+
 @media (min-width: 1920px)
 {
   #root{
@@ -634,3 +639,37 @@ svg{
   font-weight: 600;
   color: red;
 }
+
+.loading-gif-container {
+  height: 100dvh;
+  width: 100dvw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  opacity: 1;
+  transition: ease .6s;
+  z-index: 999;
+}
+
+.loading-gif-container.hide{
+opacity: 0;
+
+z-index: -1;
+}
+
+.loading-gif-container.hide .loading-img {
+  transform: scale(0);
+}
+
+.loading-img {
+  width: 240px;
+  height: 240px;
+  user-select: none;
+  transition: .2s ease;
+  transform: scale(1);
+}
+

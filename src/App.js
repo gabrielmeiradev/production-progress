@@ -17,6 +17,8 @@ function App() {
   const params = new URLSearchParams(search);
   const token = params.get("token");
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     const getData = async () => {
       if (!token) return;
@@ -29,7 +31,6 @@ function App() {
           return response.json();
         })
         .then(function (data) {
-          console.log("dados", data);
           if (!data.Erro && data.code !== 500) {
             setData(data);
             const plant1_index = data.plants.findIndex(
@@ -61,6 +62,8 @@ function App() {
             setPlant5_index(plant5_index);
             setPlant6_index(plant6_index);
             setPlant7_index(plant7_index);
+
+            setLoading(false);
           } else {
             setError(data.Erro);
             console.log("[ERRO]- " + data);
@@ -80,7 +83,15 @@ function App() {
   }, [token]);
 
   return (
-    <>
+    <div>
+      <div className={"loading-gif-container " + (loading ? "" : "hide")}>
+        <img
+          src="loading.gif"
+          alt="loading"
+          className="loading-img"
+          draggable="false"
+        />
+      </div>
       {data?.plants && (
         <>
           <div className="App">
@@ -176,7 +187,7 @@ function App() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 

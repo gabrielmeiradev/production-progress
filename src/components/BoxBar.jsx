@@ -8,7 +8,6 @@ export default function BoxBar({
   top,
   left,
   background,
-  porcent,
   product2,
   plant,
   barID,
@@ -75,8 +74,8 @@ export default function BoxBar({
         <h1 className="mini-circle-porcent">{data.turn_1}</h1>
       </div>
       {data.active_since && (
-        <fieldset className="timer">
-          <legend>Formulando</legend>
+        <fieldset className={`timer ${data.inactive ? "inactive" : ""} `}>
+          <legend>{data.inactive ? "Inativa desde" : "Formulando"}</legend>
 
           <span>{time}</span>
         </fieldset>
