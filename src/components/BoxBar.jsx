@@ -75,7 +75,7 @@ export default function BoxBar({
       </div>
       {data.active_since && (
         <fieldset className={`timer ${data.inactive ? "inactive" : ""} `}>
-          <legend>{data.inactive ? "Inativa desde" : "Formulando"}</legend>
+          <legend>{data.inactive ? "INATIVO" : "Formulando"}</legend>
 
           <span>{time}</span>
         </fieldset>
