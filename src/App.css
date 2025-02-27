@@ -236,14 +236,49 @@ svg{
 .stack-wrapper {
   position: absolute;
   top: 100px;
+  display: flex;
+  gap: 10px;
   left: 100px;
+}
+
+.stack-totals {
+  background-image: linear-gradient(to top, rgba(13, 1, 1, 0.2), rgb(13, 3, 3));
+  color: #fff;
+  max-height: 90px;
+  padding: 0px 20px;
+  font-size: 24px;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.stack-totals::after {
+  position: absolute;
+  top: -30px;
+
+  content: 'Total';
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 1px;
+  margin-bottom: 10px;
+}
+
+.stack-totals h6 {
+  margin: 0;
+  padding: 0;
 }
 
 .stack-list{
   /* background-color: burlywood; */
   width: 100%;
-  max-width: 350px;
-  min-width: 200px;
+  max-width: 380px;
+  min-width: 240px;
   padding: 10px;
   max-height: 90px;
   border-radius: 10px;

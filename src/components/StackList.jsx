@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function StackList({ users, background }) {
+export default function StackList({ users, background, total1, total2 }) {
   const [slide, setSlide] = useState(0);
 
   useEffect(() => {
@@ -10,7 +10,6 @@ export default function StackList({ users, background }) {
 
     return () => clearInterval(slideChangeInterval);
   }, [slide]);
-
 
   const nextSlide = () => {
     if (slide >= users.length / 2 - 1) return setSlide(0);
@@ -32,7 +31,9 @@ export default function StackList({ users, background }) {
         {users.map((user, index) => (
           <div
             key={index}
-            className={`stack-list-element ${(index === slide*2 || index === slide*2 + 1) ? "visible" : ""}`}
+            className={`stack-list-element ${
+              index === slide * 2 || index === slide * 2 + 1 ? "visible" : ""
+            }`}
             style={{ transform: `translateX(${slide * -100}%)` }}
           >
             {user.image ? (
@@ -49,6 +50,10 @@ export default function StackList({ users, background }) {
             <h6 className="list-text">{user.time}</h6>
           </div>
         ))}
+      </div>
+      <div className="stack-totals">
+        <h6 className="stack-total">{total1}</h6>
+        <h6 className="stack-total">{total2}</h6>
       </div>
     </div>
   );

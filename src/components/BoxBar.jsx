@@ -59,9 +59,12 @@ export default function BoxBar({
   return (
     <div className="box-bar" style={{ top: `${top}%`, left: `${left}%` }}>
       <ProgressBar porcent={data.total_porcentage} plant={plant} />
-
-      <StackList users={data.users} background={background} />
-
+      <StackList
+        users={data.users}
+        background={background}
+        total1={data.total1}
+        total2={data.total2}
+      />
       <canvas className={`arrow-${barID}`} id={`arrow${barID}`}></canvas>
       <canvas className={`arrow-${barID}`} id={`arrow-line${barID}`}></canvas>
       <div className="mini-circle-1">
@@ -80,7 +83,6 @@ export default function BoxBar({
           <span>{time}</span>
         </fieldset>
       )}
-
       <div className="mini-progress-bar">
         <MiniProgressBar />
 
