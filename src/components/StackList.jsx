@@ -51,10 +51,12 @@ export default function StackList({ users, background, total1, total2 }) {
           </div>
         ))}
       </div>
-      <div className="stack-totals">
-        <h6 className="stack-total">{total1}</h6>
-        <h6 className="stack-total">{total2}</h6>
-      </div>
+      {(total1 > 0 || total2 > 0) && (
+        <div className="stack-totals">
+          <h6 className="stack-total">{total1}</h6>
+          <h6 className="stack-total">{total2}</h6>
+        </div>
+      )}
     </div>
   );
 }
