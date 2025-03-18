@@ -43,13 +43,13 @@ export default function BoxBar({
     return timeString;
   };
 
-  if (data.active_since) {
+  if (data.active_since && !data.inactive_since) {
     setInterval(() => {
       setTime(convertTimer(data.active_since));
     }, 1000);
   }
 
-  if (data.inactive_since && !data.active_since) {
+  if (data.inactive_since) {
     setInterval(() => {
       setTime(convertTimer(data.inactive_since));
     }, 1000);
