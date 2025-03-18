@@ -49,6 +49,12 @@ export default function BoxBar({
     }, 1000);
   }
 
+  if (data.inactive_since && !data.active_since) {
+    setInterval(() => {
+      setTime(convertTimer(data.inactive_since));
+    }, 1000);
+  }
+
   const id = setInterval(() => {
     const c = makeArrow(barID);
     if (c) {
@@ -76,9 +82,9 @@ export default function BoxBar({
       <div className="mini-circle-3">
         <h1 className="mini-circle-porcent">{data.turn_1}</h1>
       </div>
-      {data.active_since && (
-        <fieldset className={`timer ${data.inactive ? "inactive" : ""} `}>
-          <legend>{data.inactive ? "INATIVO" : "Formulando"}</legend>
+      {(data.active_since || data.inactive_since) && (
+        <fieldset className={`timer ${data.inactive_since ? "inactive" : ""} `}>
+          <legend>{data.inactive_since ? "INATIVO" : "Formulando"}</legend>
 
           <span>{time}</span>
         </fieldset>
